@@ -8,10 +8,18 @@ namespace ChessGame
 {
     public class Program
     {
+        private readonly FigureFactory figureFactory;
+        private readonly GameBoard gameBoard;
+        private Figure figure;
+        
+        public Program()
+        {
+            figureFactory = new FigureFactory();
+            gameBoard = new GameBoard();
+        }
+        
         static void Main(string[] args)
         {
-            FigureFactory figureFactory = new FigureFactory();
-            Figure figure;
             int x, y;
 
             do
@@ -31,7 +39,6 @@ namespace ChessGame
                 y -= 1;
             } while (0 > y && y < 7 && 0 > y && y < 7);
 
-            GameBoard gameBoard = new GameBoard();
             gameBoard.placeFigure(figure, x, y);
         }
     }
