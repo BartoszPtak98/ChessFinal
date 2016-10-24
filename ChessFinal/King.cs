@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessGame
 {
-    public class King : Figure
+    public class King : IFigure
     {
         public int[,] move(int[,] chessboard, int x, int y)
         {

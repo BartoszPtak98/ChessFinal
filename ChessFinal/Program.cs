@@ -10,10 +10,13 @@ namespace ChessGame
     {
         static void Main(string[] args)
         {
-            FigureFactory figureFactory = new FigureFactory();
-            Figure figure;
-            int x, y;
+            FigureFactory figureFactory;
+            GameBoard gameBoard;
+            IFigure figure;
+            figureFactory = new FigureFactory();
+            gameBoard = new GameBoard();
 
+            int x, y;
             do
             {
                 Console.Write("Figura: ");
@@ -30,8 +33,6 @@ namespace ChessGame
                 y = int.Parse(Console.ReadLine());
                 y -= 1;
             } while (0 > y && y < 7 && 0 > y && y < 7);
-
-            GameBoard gameBoard = new GameBoard();
             gameBoard.placeFigure(figure, x, y);
         }
     }

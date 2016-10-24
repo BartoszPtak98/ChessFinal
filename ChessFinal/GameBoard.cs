@@ -16,7 +16,7 @@ namespace ChessGame
                 for (int j = 0; j < 8; j++) chessboard[i, j] = 0;
         }
 
-        public void placeFigure(Figure figure, int x, int y)
+        public void placeFigure(IFigure figure, int x, int y)
         {
             if (figure is King) { chessboard = ((King)figure).move(this.chessboard, x, y); }
             if (figure is Queen) { chessboard = ((Queen)figure).move(this.chessboard, x, y); }

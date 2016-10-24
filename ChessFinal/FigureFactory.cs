@@ -8,7 +8,7 @@ namespace ChessGame
 {
     public class FigureFactory
     {
-        public Figure getFigure(string figureType)
+        public IFigure getFigure(string figureType)
         {
             if (figureType.ToLower() == "king") return new King();
             if (figureType.ToLower() == "horse") return new Horse();
